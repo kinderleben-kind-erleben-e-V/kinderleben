@@ -1,0 +1,8 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+    <filesMatch ".(flv|gif|ico|jpg|jpeg|mp4|mpeg|png|svg|swf|webp)$">
+        Header set Cache-Control "max-age=86400, public"
+    </filesMatch>
+    Header set Cache-Control "max-age=86400, must-revalidate"
+</IfModule>
